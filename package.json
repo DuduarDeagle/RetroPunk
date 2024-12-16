@@ -1,0 +1,200 @@
+{
+	"name": "retropunk",
+	"version": "0.1.0-alpha.0",
+	"author": {
+		"name": "Duduar",
+		"url": "https://duduar.dev",
+		"email": "support@duduar.dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://codeberg.org/duduar/retropunk.git"
+	},
+	"license": "MIT",
+	"private": false,
+	"type": "module",
+	"main": "index.ts",
+	"devDependencies": {
+		"@chromatic-com/storybook": "3.2.2",
+		"@commitlint/cli": "19.6.1",
+		"@storybook/addon-essentials": "8.4.7",
+		"@storybook/addon-interactions": "8.4.7",
+		"@storybook/addon-links": "8.4.7",
+		"@storybook/addon-onboarding": "8.4.7",
+		"@storybook/addon-postcss": "2.0.0",
+		"@storybook/addon-webpack5-compiler-swc": "1.0.5",
+		"@storybook/blocks": "8.4.7",
+		"@storybook/react": "8.4.7",
+		"@storybook/react-webpack5": "8.4.7",
+		"@storybook/test": "8.4.7",
+		"@types/bun": "1.1.14",
+		"@types/node": "22.10.2",
+		"@types/react": "19.0.1",
+		"@types/react-dom": "19.0.2",
+		"@typescript-eslint/eslint-plugin": "8.18.0",
+		"@typescript-eslint/parser": "8.18.0",
+		"autoprefixer": "10.4.20",
+		"clsx": "2.1.1",
+		"concurrently": "9.1.0",
+		"cssnano": "7.0.6",
+		"cssnano-preset-advanced": "7.0.6",
+		"eslint": "8.57.0",
+		"eslint-config-prettier": "9.1.0",
+		"gitmoji-cli": "9.5.0",
+		"husky": "9.1.7",
+		"lint-staged": "15.2.11",
+		"postcss": "8.4.49",
+		"postcss-import": "16.1.0",
+		"postcss-mixins": "11.0.3",
+		"postcss-nested": "7.0.2",
+		"prettier": "3.4.2",
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
+		"sharp": "0.33.5",
+		"storybook": "8.4.7",
+		"stylelint": "16.12.0"
+	},
+	"postcss": {
+		"plugins": {
+			"postcss-import": {},
+			"postcss-mixins": {},
+			"postcss-nested": {},
+			"autoprefixer": {},
+			"cssnano": {
+				"preset": "advanced"
+			}
+		}
+	},
+	"eslintConfig": {
+		"env": {
+			"browser": true,
+			"node": true,
+			"es2021": true
+		},
+		"extends": [
+			"eslint:recommended",
+			"plugin:@typescript-eslint/recommended",
+			"eslint-config-prettier"
+		],
+		"plugins": [
+			"@typescript-eslint"
+		],
+		"parser": "@typescript-eslint/parser",
+		"parserOptions": {
+			"ecmaVersion": "latest",
+			"sourceType": "module"
+		},
+		"ignorePatterns": [
+			"core/"
+		],
+		"rules": {
+			"sort-imports": [
+				"error",
+				{
+					"allowSeparatedGroups": true,
+					"ignoreCase": false,
+					"ignoreDeclarationSort": false,
+					"ignoreMemberSort": false,
+					"memberSyntaxSortOrder": [
+						"all",
+						"single",
+						"multiple",
+						"none"
+					]
+				}
+			]
+		}
+	},
+	"prettier": {
+		"printWidth": 80,
+		"useTabs": true,
+		"singleQuote": false,
+		"quoteProps": "as-needed",
+		"jsxSingleQuote": false,
+		"arrowParens": "avoid",
+		"bracketSpacing": true,
+		"bracketSameLine": true,
+		"semi": false,
+		"trailingComma": "none"
+	},
+	"stylelint": {
+		"extends": "./core/lib/@duduar/stylelint-config/dist/index.js"
+	},
+	"lint-staged": {
+		"*.json": "prettier --check",
+		"*.js": [
+			"prettier --check",
+			"eslint --quiet"
+		],
+		"*.cjs": [
+			"prettier --check",
+			"eslint --quiet"
+		],
+		"*.mjs": [
+			"prettier --check",
+			"eslint --quiet"
+		],
+		"*.jsx": [
+			"prettier --check",
+			"eslint --quiet"
+		],
+		"*.ts": [
+			"prettier --check",
+			"eslint --quiet"
+		],
+		"*.tsx": [
+			"prettier --check",
+			"eslint --quiet"
+		],
+		"*.css": [
+			"prettier --check",
+			"stylelint"
+		]
+	},
+	"gitmoji": {
+		"autoAdd": false,
+		"emojiFormat": "emoji",
+		"scopePrompt": false,
+		"messagePrompt": false,
+		"capitalizeTitle": true,
+		"gitmojisUrl": "https://gitmoji.dev/api/gitmojis"
+	},
+	"commitlint": {
+		"rules": {
+			"header-max-length": [
+				2,
+				"always",
+				50
+			],
+			"header-full-stop": [
+				2,
+				"never",
+				"."
+			],
+			"body-leading-blank": [
+				2,
+				"always",
+				""
+			],
+			"body-full-stop": [
+				1,
+				"always",
+				"."
+			],
+			"body-case": [
+				2,
+				"always",
+				"sentence-case"
+			]
+		}
+	},
+	"scripts": {
+		"prepare": "husky",
+		"dev": "storybook dev -p 6006 --no-open",
+		"lint": "eslint . --ext .js,.cjs,.mjs,.jsx,.ts,.tsx",
+		"prettier": "prettier . --check",
+		"prettier:fix": "prettier . --write",
+		"stylelint": "stylelint '**/*.css'",
+		"stylelint:fix": "stylelint --fix '**/*.css'"
+	}
+}

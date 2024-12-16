@@ -1,0 +1,3 @@
+[submodule "core/lib/@duduar/stylelint-config"]
+	path = core/lib/@duduar/stylelint-config
+	url = https://codeberg.org/duduar/stylelint-config

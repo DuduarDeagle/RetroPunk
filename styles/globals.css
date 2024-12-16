@@ -1,0 +1,9 @@
+@import "base.css";
+
+@layer base, components;
+
+:root {
+	/* == colors */
+	--color-carbon: #1c1c1c;
+	--color-neutral-white: #fbfbfb;
+}
