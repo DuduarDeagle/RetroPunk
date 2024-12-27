@@ -1,3 +1,4 @@
+@import "fonts.css";
 @import "base.css";
 
 @layer base, components;
@@ -6,4 +7,7 @@
 	/* == colors */
 	--color-carbon: #1c1c1c;
 	--color-neutral-white: #fbfbfb;
+
+	/* == fonts */
+	--font-default: "Hanken Grotesk";
 }

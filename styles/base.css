@@ -19,7 +19,8 @@
 	}
 
 	html {
-		font-family: system-ui;
+		font-family: var(--font-default), system-ui;
+		font-weight: 300;
 		text-rendering: optimizelegibility;
 		font-synthesis: none;
 	}

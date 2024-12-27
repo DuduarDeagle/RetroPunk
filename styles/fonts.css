@@ -1,0 +1,15 @@
+@font-face {
+	font-display: swap;
+	font-family: "Hanken Grotesk";
+	src: url("../fonts/hanken-grotesk/hanken-grotesk-latin-300-normal.woff2")
+		format("woff2");
+	font-weight: 300;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Hanken Grotesk";
+	src: url("../fonts/hanken-grotesk/hanken-grotesk-latin-600-normal.woff2")
+		format("woff2");
+	font-weight: 600;
+}
