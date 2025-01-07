@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Meta, StoryObj } from "@storybook/react"
 
 /* Import components */
-import { Button } from "./Button"
+import Button from "./Button"
 
 /* Define types */
 type Story = StoryObj<typeof Button>
