@@ -47,6 +47,7 @@
 		"postcss-import": "16.1.0",
 		"postcss-mixins": "11.0.3",
 		"postcss-nested": "7.0.2",
+		"postcss-simple-vars": "7.0.1",
 		"prettier": "3.4.2",
 		"react": "19.0.0",
 		"react-dom": "19.0.0",
@@ -58,6 +59,7 @@
 		"plugins": {
 			"postcss-import": {},
 			"postcss-mixins": {},
+			"postcss-simple-vars": {},
 			"postcss-nested": {},
 			"autoprefixer": {},
 			"cssnano": {

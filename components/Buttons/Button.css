@@ -1,0 +1,183 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+@layer components {
+	.btn {
+		position: relative;
+
+		overflow: hidden;
+		border: 1px solid $color-carbon;
+		border-radius: 0.5rem;
+		height: 2.25rem;
+		padding-inline: 1rem;
+
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		color: $color-neutral-white;
+		text-decoration: none;
+
+		appearance: none;
+		background: $color-carbon;
+
+		transition-property: background;
+		transition-duration: 200ms;
+		transition-timing-function: $timing-function-in-out;
+
+		user-select: none;
+
+		.label {
+			display: block;
+
+			transition-property: color, transform;
+		}
+
+		svg {
+			@mixin icon;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-carbon;
+
+			background: var(--color-theme);
+		}
+
+		&:active {
+			@media (pointer: fine) {
+				filter: brightness(0.94);
+			}
+		}
+
+		&:disabled {
+			border-color: #bccbe9;
+
+			color: #bccbe9;
+
+			background: transparent;
+			filter: grayscale();
+
+			cursor: not-allowed;
+		}
+	}
+
+	.btn--transparent {
+		color: $color-carbon;
+
+		background: transparent;
+
+		&:hover,
+		&:active {
+			color: $color-neutral-white;
+
+			background: $color-carbon;
+
+			@media (pointer: fine) {
+				&:not(:active) {
+					color: $color-carbon;
+
+					background: $color-antiflash-white;
+				}
+			}
+		}
+	}
+
+	.btn--cta {
+		outline: 3px solid $color-carbon;
+		border-width: 3px;
+		border-color: $color-neutral-white;
+
+		box-shadow: 6px 6px 0 var(--color-theme);
+
+		transition-property: box-shadow, transform;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: -100%;
+			z-index: 1;
+
+			width: 100%;
+			height: 100%;
+
+			content: "";
+			background: linear-gradient(
+				90deg,
+				transparent,
+				rgb(255 255 255 / 80%),
+				transparent
+			);
+		}
+
+		&:hover {
+			color: $color-neutral-white;
+
+			background: $color-carbon;
+
+			@media (pointer: fine) {
+				box-shadow: 10px 10px 0 var(--color-theme);
+
+				transform: translate(-4px, -4px);
+
+				&::before {
+					animation: shimmer 1500ms;
+				}
+
+				.label {
+					transform: skew(-6deg);
+				}
+			}
+		}
+
+		&:active {
+			box-shadow: none;
+
+			transform: translate(4px, 4px);
+
+			.label {
+				@media (pointer: fine) {
+					transform: skew(0deg);
+				}
+			}
+		}
+
+		@media (hover: none) {
+			transition-property: transform;
+			transition-duration: 75ms;
+		}
+	}
+
+	.btn--icon {
+		width: 2.25rem;
+		padding: 0;
+	}
+
+	.btn--danger {
+		border-color: $color-red-hard;
+
+		color: $color-red-saturate;
+
+		background: transparent;
+
+		&:hover {
+			color: $color-neutral-white;
+
+			background: $color-red-saturate;
+		}
+	}
+
+	@keyframes shimmer {
+		0% {
+			left: -100%;
+		}
+
+		100% {
+			left: 100%;
+		}
+	}
+}

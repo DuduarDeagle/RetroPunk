@@ -1,0 +1,35 @@
+/* == colors */
+$color-neutral-white: #fbfbfb;
+$color-floral-white: #fefaef;
+$color-antiflash-white: #efefef;
+$color-carbon: #1c1c1c;
+$color-cyan-soft: #daf5f0;
+$color-cyan-medium: #a7dbd8;
+$color-cyan-hard: #87ceeb;
+$color-cyan-saturate: #69d2e7;
+$color-green-soft: #b5d2ad;
+$color-green-medium: #bafca2;
+$color-green-hard: #90ee90;
+$color-green-saturate: #7fbc8c;
+$color-yellow-soft: #fdfd96;
+$color-yellow-medium: #ffdb58;
+$color-yellow-hard: #f4d738;
+$color-yellow-saturate: #e3a018;
+$color-red-soft: #f8d6b3;
+$color-red-medium: #ffa07a;
+$color-red-hard: #ff7a5c;
+$color-red-saturate: #ff6b6b;
+$color-pink-soft: #fcdfff;
+$color-pink-medium: #ffc0cb;
+$color-pink-hard: #ffb2ef;
+$color-pink-saturate: #ff69b4;
+$color-purple-soft: #e3dff2;
+$color-purple-medium: #c4a1ff;
+$color-purple-hard: #a388ee;
+$color-purple-saturate: #9723c9;
+
+/* == fonts */
+$font-default: "Hanken Grotesk";
+
+/* == transitions and animations */
+$timing-function-in-out: cubic-bezier(0.4, 0, 0.2, 1);
