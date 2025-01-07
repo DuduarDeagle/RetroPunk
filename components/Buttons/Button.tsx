@@ -26,7 +26,7 @@ interface Props
 }
 
 /* Set up a button component */
-export const Button: React.FC<Props> = ({
+const Button: React.FC<Props> = ({
 	mode,
 	label,
 	reverse,
@@ -57,3 +57,6 @@ export const Button: React.FC<Props> = ({
 		</button>
 	)
 }
+
+/* Export the button component by default */
+export default Button
