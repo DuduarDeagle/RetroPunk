@@ -1,3 +1,4 @@
 @define-mixin icon $height: 1.5cap {
+	width: auto;
 	height: $height;
 }
