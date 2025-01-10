@@ -1,3 +1,19 @@
+@font-face {
+	font-display: swap;
+	font-family: "Hanken Grotesk";
+	src: url("../fonts/hanken-grotesk/hanken-grotesk-latin-300-normal.woff2")
+		format("woff2");
+	font-weight: 300;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Hanken Grotesk";
+	src: url("../fonts/hanken-grotesk/hanken-grotesk-latin-600-normal.woff2")
+		format("woff2");
+	font-weight: 600;
+}
+
 :root {
 	--color-theme: $color-cyan-saturate; /* -> select a color theme */
 }
@@ -25,7 +41,7 @@
 	}
 
 	html {
-		font-family: $font-default, system-ui;
+		font-family: "Hanken Grotesk", system-ui;
 		font-weight: 300;
 		text-rendering: optimizelegibility;
 		font-synthesis: none;

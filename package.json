@@ -44,6 +44,7 @@
 		"husky": "9.1.7",
 		"lint-staged": "15.2.11",
 		"postcss": "8.4.49",
+		"postcss-cli": "11.0.0",
 		"postcss-import": "16.1.0",
 		"postcss-mixins": "11.0.3",
 		"postcss-nested": "7.0.2",
@@ -193,6 +194,7 @@
 	"scripts": {
 		"prepare": "husky",
 		"dev": "storybook dev -p 6006 --no-open",
+		"build:css": "postcss styles/globals.css -o dist/styles.min.css",
 		"lint": "eslint . --ext .js,.cjs,.mjs,.jsx,.ts,.tsx",
 		"prettier": "prettier . --check",
 		"prettier:fix": "prettier . --write",

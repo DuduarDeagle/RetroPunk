@@ -28,9 +28,5 @@ $color-purple-medium: #c4a1ff;
 $color-purple-hard: #a388ee;
 $color-purple-saturate: #9723c9;
 
-/* == fonts */
-$font-default: "Hanken Grotesk";
-$font-tech: "Bruno Ace SC";
-
 /* == transitions and animations */
 $timing-function-in-out: cubic-bezier(0.4, 0, 0.2, 1);
