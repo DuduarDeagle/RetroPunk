@@ -46,6 +46,10 @@
 		text-rendering: optimizelegibility;
 		font-synthesis: none;
 		font-size: 0.875rem;
+
+		@media (width>=640px) {
+			font-size: 1rem;
+		}
 	}
 
 	body {
