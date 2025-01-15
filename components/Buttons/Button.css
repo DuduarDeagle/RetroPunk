@@ -26,8 +26,6 @@
 		background: $color-carbon;
 
 		transition-property: background;
-		transition-duration: 200ms;
-		transition-timing-function: $timing-function-in-out;
 
 		user-select: none;
 
