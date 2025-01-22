@@ -2,5 +2,6 @@
 	.card {
 		border: 3px solid $color-carbon;
 		border-radius: 0.5rem;
+		width: 100%;
 	}
 }
