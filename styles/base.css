@@ -105,6 +105,7 @@
 		font-synthesis: none;
 		font-size: 0.875rem;
 
+		transition-property: color, background, box-shadow;
 		transition-duration: 200ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
