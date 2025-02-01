@@ -73,7 +73,9 @@
 @layer base, components, utilities;
 
 :root {
-	--color-theme: $color-cyan-saturate; /* -> select a color theme */
+	--color-theme: $color-cyan-saturate;
+
+	/* -> select a color theme */
 }
 
 @layer base {
@@ -103,15 +105,10 @@
 		font-weight: 400;
 		text-rendering: optimizelegibility;
 		font-synthesis: none;
-		font-size: 0.875rem;
 
 		transition-property: color, background, box-shadow;
 		transition-duration: 200ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-		@media (width>=1024px) {
-			font-size: 1rem;
-		}
 	}
 
 	body {
