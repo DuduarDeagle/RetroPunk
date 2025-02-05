@@ -14,7 +14,7 @@ interface Props
 	/**
 	 * What is the button style?
 	 */
-	mode?: "transparent" | "cta" | "danger"
+	mode?: "outlined" | "cta" | "danger"
 	/**
 	 * Text to be displayed on the button
 	 */
@@ -27,6 +27,7 @@ interface Props
 
 /* Set up a button component */
 const Button: React.FC<Props> = ({
+	className,
 	mode,
 	label,
 	reverse,
@@ -38,22 +39,15 @@ const Button: React.FC<Props> = ({
 			className={clsx(
 				"btn",
 				!label && "btn--icon",
-				mode === "transparent" && "btn--transparent",
+				mode === "outlined" && "btn--outlined",
 				mode === "cta" && "btn--cta",
-				mode === "danger" && "btn--danger"
+				mode === "danger" && "btn--danger",
+				className
 			)}
 			{...props}>
-			{!reverse &&
-				React.Children.count(children) <= 1 &&
-				React.isValidElement(children) &&
-				children.type === "svg" &&
-				children}
+			{!reverse && React.Children.count(children) <= 1 && children}
 			{label && <span className="label">{label}</span>}
-			{reverse &&
-				React.Children.count(children) <= 1 &&
-				React.isValidElement(children) &&
-				children.type === "svg" &&
-				children}
+			{reverse && React.Children.count(children) <= 1 && children}
 		</button>
 	)
 }

@@ -1,9 +1,11 @@
-/* Import types */
+/* Import dependencies */
 import * as React from "react"
-import type { Meta, StoryObj } from "@storybook/react"
 
 /* Import components */
 import Button from "./Button"
+
+/* Import types */
+import type { Meta, StoryObj } from "@storybook/react"
 
 /* Define types */
 type Story = StoryObj<typeof Button>
@@ -21,9 +23,9 @@ export default {
 /* Set up stories */
 export const Default: Story = {}
 
-export const Transparent: Story = {
+export const Outlined: Story = {
 	args: {
-		mode: "transparent"
+		mode: "outlined"
 	}
 }
 

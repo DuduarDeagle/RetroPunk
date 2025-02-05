@@ -64,7 +64,7 @@
 		}
 	}
 
-	.btn--transparent {
+	.btn--outlined {
 		color: $color-carbon;
 
 		background: transparent;
