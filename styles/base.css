@@ -74,8 +74,6 @@
 
 :root {
 	--color-theme: $color-cyan-saturate;
-
-	/* -> select a color theme */
 }
 
 @layer base {
