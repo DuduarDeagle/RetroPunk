@@ -15,3 +15,16 @@
 	font-family: "Bruno Ace SC", system-ui;
 	font-weight: 400;
 }
+
+@font-face {
+	font-display: swap;
+	font-family: "Rock Salt";
+	src: url("../fonts/rock-salt/rock-salt-latin-400-normal.woff2")
+		format("woff2");
+	font-weight: 400;
+}
+
+@define-mixin font-tech {
+	font-family: "Rock Salt", system-ui;
+	font-weight: 400;
+}
